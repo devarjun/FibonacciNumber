@@ -1,8 +1,16 @@
-n = int(input("Enter the value of n: "))
-a,b = 0,1
-sum, count = 0,1
-print("Fibonacci Series: ", end = " ")
-while(count <= n):
-  print(sum, end = " ")
-  count += 1
-  a,b,sum = b, sum, a+b
+inp = int(input("How many terms? "))
+n1, n2 = 0, 1
+count = 0
+if inp <= 0:
+   print("Please enter a positive integer")
+elif inp == 1:
+   print("Fibonacci sequence upto",inp,":")
+   print(n1)
+else:
+   print("Fibonacci sequence:")
+   while count < inp:
+       print(n1)
+       nth = n1 + n2
+       n1 = n2
+       n2 = nth
+       count += 1
